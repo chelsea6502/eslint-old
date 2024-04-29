@@ -1,0 +1,11 @@
+// react all, eslint-all, typescript-all
+
+{
+  "parserOptions": { "project": "./tsconfig.json" },
+  "plugins": ["@typescript-eslint", "functional", "total-functions"],
+  "extends": [
+    "plugin:@typescript-eslint/strict-type-checked-only",
+    "typed-fp",
+    "next/core-web-vitals"
+  ]
+}
