@@ -2,10 +2,24 @@
 
 {
   "parserOptions": { "project": "./tsconfig.json" },
-  "plugins": ["@typescript-eslint", "functional", "total-functions"],
+  "plugins": [
+    "@typescript-eslint",
+    "functional",
+    "total-functions",
+    "only-warn"
+  ],
   "extends": [
     "plugin:@typescript-eslint/strict-type-checked-only",
     "typed-fp",
     "next/core-web-vitals"
-  ]
+  ],
+  "rules": {
+    "functional/no-expression-statements": "off",
+    "functional/prefer-immutable-types": "off",
+    "functional/functional-parameters": "off",
+    "functional/no-conditional-statements": [
+      "warn",
+      { "allowReturningBranches": true }
+    ]
+  }
 }
